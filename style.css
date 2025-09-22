@@ -538,7 +538,7 @@ body {
     position: relative;
     z-index: 999999999;
   }
-  result {
+  .result {
     grid-template-columns: repeat(2, 1fr);
   }
 
