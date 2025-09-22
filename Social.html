@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>   
+  <link rel="stylesheet" href="style.css">
+  <title>Warning</title>
+  <style>
+    .body {
+      overflow-y: hidden;
+    z-index: 0;
+    }
+
+   button {
+      margin: 0;
+      padding-left: 40px;
+      padding-right: 40px;
+      font-size: 20px;
+    }
+    .war {
+      max-width: 100%;
+    width: 25%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(15,23,36,0.5);
+    box-shadow:0 6px 18px var(--primary);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem ;
+    border-radius: 30px;
+    }
+    .footer {
+      margin: 0;
+      position: fixed;
+      bottom: 0;
+    }
+    .footer-bawah {
+      z-index: -7;
+    }
+    .sosial {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    .sosial a{
+      gap: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      background-color: rgba(15,23,36,0.5);
+      border-radius: 20px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      transition: 0.3s ease-in-out;
+      box-shadow: 0 0 5px var(--primary);
+    }
+    .sosial a:hover {
+      transform: translateY(-10px);
+      background-color: rgba(59,59,59,0.2);
+      box-shadow: 0 0 16px var(--primary);
+    }
+        @media (max-width: 768px) {
+    .navbar .navbar-nav {
+  position: fixed; /* biar selalu di atas */
+  top: 85px;
+  right: -100;
+  width: 15rem;
+  height: 100%; /* penuh tinggi layar */
+  transition: right 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem 1rem;
+  z-index: 9999; /* biar gak ketiban */
+}
+    .war {
+      position: absolute;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 30px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(15,23,36,0.5);
+    box-shadow:0 6px 18px var(--primary);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    width: 90%;
+    }
+
+ 
+    h2 {
+    padding: 0;
+      display: flex;
+      margin: 0;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+}
+  </style>
+</head>
+<body> 
+<nav class="navbar">
+    <div class="navbar-logo">
+      <ion-icon id="logo" name="dice"></ion-icon>
+      <h1>D.A.Tools</h1></div>
+    <div class="navbar-nav">
+      <a href="index.html">Teamgenerator</a>
+      <a href="index.html" class="aboutaja">About</a>
+      <a href="#">Social Media</a>
+      <a href="Warning.html">Comunity</a>
+    <div class="tema" style="display:flex; align-items:center;">
+      <p>🌝</p>
+      <label class="toggle-label">
+        <input type="checkbox" class="toggle-input" />
+        <div class="toggle-track"></div>
+        <span class="toggle-knob"></span>
+        </label>
+        <p>🌞</p>
+    </div>
+    </div>
+    <a href="#" id="hamburger-menu"><ion-icon id="menu"name="menu"></ion-icon></a>
+  </nav>
+
+  <div class="war">
+    <div class="sosial">
+      <a href="https://www.tiktok.com/@gwehj_amin?_t=ZS-8zsZtMxf7Ga&_r=1">
+          <h4>Tiktok Account</h4>
+          <ion-icon name="logo-tiktok"></ion-icon>
+      </a>
+      <a href="https://www.instagram.com/gwehj_amin?igsh=OWRxZTY2bnZxeTdo">
+        <h4>Instagram Account</h4>
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a>
+      <a href="https://www.facebook.com/share/1BkSJA27bR/">
+        <h4>Facebook Account</h4>
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a>
+    </div>
+  </div>
+ <div class="footer-bawah">
+   <div></div>
+  <Footer class="footer">
+    <div class="social">
+      <a href="#">
+        <ion-icon  class="a"name="logo-facebook"></ion-icon></a>
+      <a href="#">
+        <ion-icon class="a"name="logo-tiktok"></ion-icon></a>
+      <a href="#">
+        <ion-icon  class="a"name="logo-instagram"></ion-icon></a>
+    </div>
+    <div class="links">
+      <a href="#home">Home</a>
+      <a href="#about">Tentang kami</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Kontak</a>
+    </div>
+    <div class="c">
+      <p>Created by <a href="https://github.com/EX-SaifulAmin">AhmadSaifulAmin & Danisaputra</a>. | © 2023.</p>
+    </div>
+  </Footer>
+  </div>
+  <script>const navbar = document.querySelector('.navbar-nav');
+const hamburgerMen = document.querySelector('#hamburger-menu');
+
+  hamburgerMen.onclick = () => {
+    navbar.classList.toggle('active');
+  };
+
+  
+  
+  document.addEventListener('click', function(e) {
+    if(!hamburgerMen.contains(e.target) && !navbar.contains(e.target)) {
+      navbar.classList.remove('active');
+    };
+  });
+  const a2 = document.querySelector('.aboutaja');
+if (window.innerWidth <= 768) 
+  a2.href = 'index.html#about2';
+
+  
+  
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
