@@ -47,7 +47,7 @@ function Clearall() {
       names.value = "";
       groups.value = "";
       document.getElementById("result").innerHTML = "";
-     alert("Data terhapus dengan sukses");
+     
     }
     else {
       alert("Tindakan dibatalkan");
