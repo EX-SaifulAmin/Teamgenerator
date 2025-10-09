@@ -38,6 +38,11 @@
       });
   }
 function Clearall() {
+ const namess =document.getElementById("names").value;
+  const vjumlahkelompok= document.getElementById("groups").value;
+    if (!namess.length && !vjumlahKelompok ) {
+      return;
+    }
     if (confirm("Apa anda yakin ingin menghapus semuanya")) {
       names.value = "";
       groups.value = "";
