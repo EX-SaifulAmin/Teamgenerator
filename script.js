@@ -17,7 +17,7 @@
     alert("⚠️ Jumlah kelompok lebih banyak dari jumlah peserta!");
     return;
   }
-    //mengambil jumlah kelompok yang di isi
+    //mengambil lokasi tempat hsil
     let resultDiv = document.getElementById("result");
     resultDiv.innerHTML = "";//menghapus hasil sebelumnya
     // Acak urutan nama
@@ -37,12 +37,15 @@
       resultDiv.appendChild(div);
       });
   }
+//fungsi untuk menghapus semua input/hasil
 function Clearall() {
  const namess =document.getElementById("names").value;
   const vjumlahkelompok= document.getElementById("groups").value;
+ //jika nilai nama dan jumlah kelompok kosong maka tindakan tidak akan dilanjutkan
     if (!namess.length && !vjumlahKelompok ) {
       return;
     }
+ //konfirmasi untuk pengguna apakah benar2 ingin memghapus
     if (confirm("Apa anda yakin ingin menghapus semuanya")) {
       names.value = "";
       groups.value = "";
@@ -54,7 +57,7 @@ function Clearall() {
     }
   }
 
-  
+  //fitur darkmode/lightmode
   const hitam = document.querySelector('.toggle-input');
   
 if (localStorage.getItem('darkMode') === 'true') {
@@ -92,7 +95,8 @@ hitam.addEventListener('change', () => {
       aja.classList.remove('active');
     },2000)
   }
-  
+
+// kode agar muncul sidebar ketika tampil di mobile/hp
   const navbarNav = document.querySelector('.navbar-nav');
 const hamburgerMenu = document.querySelector('#hamburger-menu');
 
@@ -108,7 +112,7 @@ const hamburgerMenu = document.querySelector('#hamburger-menu');
       navbarNav.classList.remove('active');
     };
   });
-  
+ //link about jika di pc/hp
   const a = document.querySelector('.aboutaja');
   const element = document.querySelector('.about');
 const styles = window.getComputedStyle(element);
